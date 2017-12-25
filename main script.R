@@ -142,8 +142,8 @@ ggplot(titanic, aes(x = Age, fill = Survived)) +
   theme_bw() +
   facet_wrap(Sex ~ Pclass) +
   geom_density(alpha = 0.5) +
-  labs(y = "Age",
-       x = "Survived",
+  labs(y = "Density",
+       x = "Age",
        title = "Titanic Survival Rates by Age, Pclass and Sex")
 
 # If you prefer histograms, no problem!
@@ -151,7 +151,7 @@ ggplot(titanic, aes(x = Age, fill = Survived)) +
   theme_bw() +
   facet_wrap(Sex ~ Pclass) +
   geom_histogram(binwidth = 5) +
-  labs(y = "Age",
-       x = "Survived",
+  labs(y = "Count",
+       x = "Age",
        title = "Titanic Survival Rates by Age, Pclass and Sex")
 
