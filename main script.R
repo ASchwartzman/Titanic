@@ -138,6 +138,8 @@ ggplot(titanic, aes(x = Survived, y = Age)) +
 # a density plot as a smoothed version of the histogram. Using ggplot2
 # we can use facets to allow for visual drill-down via density plots.
 #
+
+png('rplot.png')
 ggplot(titanic, aes(x = Age, fill = Survived)) +
   theme_bw() +
   facet_wrap(Sex ~ Pclass) +
@@ -145,6 +147,7 @@ ggplot(titanic, aes(x = Age, fill = Survived)) +
   labs(y = "Density",
        x = "Age",
        title = "Titanic Survival Rates by Age, Pclass and Sex")
+dev.off()
 
 # If you prefer histograms, no problem!
 ggplot(titanic, aes(x = Age, fill = Survived)) +
@@ -154,4 +157,5 @@ ggplot(titanic, aes(x = Age, fill = Survived)) +
   labs(y = "Count",
        x = "Age",
        title = "Titanic Survival Rates by Age, Pclass and Sex")
+
 
